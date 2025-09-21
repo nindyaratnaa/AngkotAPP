@@ -21,14 +21,4 @@ public class Angkot {
     public LinkedList<Pemberhentian> getPemberhentianList() {
         return pemberhentianList;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Angkot Jurusan: ").append(jurusan).append("\n");
-        for (Pemberhentian p : pemberhentianList) {
-            sb.append(" - ").append(p.toString()).append("\n");
-        }
-        return sb.toString();
-    }
 }

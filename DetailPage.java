@@ -56,14 +56,15 @@ public class DetailPage extends JFrame {
         bottomPanel.setBackground(new Color(0xD6EAF8));
         JButton btnBack = new JButton("⬅ Kembali");
         btnBack.setFont(new Font("SansSerif", Font.BOLD, 16));
-        btnBack.setBackground(new Color(0x2980B9));
+        btnBack.setBackground(new Color(25, 25, 80));
         btnBack.setForeground(Color.WHITE);
         btnBack.setFocusPainted(false);
         btnBack.setPreferredSize(new Dimension(150, 45));
         btnBack.setBorder(BorderFactory.createEmptyBorder());
+        btnBack.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBack.setBackground(new Color(0x1B4F72));
+                btnBack.setBackground(new Color(25, 25, 80));
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnBack.setBackground(new Color(0x2980B9));

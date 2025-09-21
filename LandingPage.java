@@ -8,7 +8,7 @@ public class LandingPage extends JFrame {
     private List<Angkot> data;
 
     // Warna palet seperti di desain
-    private final Color BG_COLOR = new Color(179, 205, 227); // biru muda
+    private final Color BG_COLOR = new Color(230, 240, 250); // biru muda
     private final Color TEXT_COLOR = new Color(25, 25, 80);  // biru tua
 
     public LandingPage(List<Angkot> data) {
@@ -24,7 +24,7 @@ public class LandingPage extends JFrame {
         JLabel title = new JLabel("SELAMAT DATANG DI ANGKOTIN AJA", JLabel.CENTER);
         title.setFont(new Font("Segoe UI", Font.BOLD, 50));
         title.setForeground(TEXT_COLOR);
-        title.setBorder(BorderFactory.createEmptyBorder(30, 10, 30, 10));
+        title.setBorder(BorderFactory.createEmptyBorder(50, 10, 30, 10));
         add(title, BorderLayout.NORTH);
 
         // CENTER: Grid dua kolom (gambar di kiri, teks di kanan)
@@ -33,8 +33,8 @@ public class LandingPage extends JFrame {
         centerPanel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
 
         // kiri: gambar peta
-        ImageIcon icon = new ImageIcon("C:/git/AngkotAPP/AngkotAPP/img/Illustration.png");
-        Image img = icon.getImage().getScaledInstance(600, 400, Image.SCALE_SMOOTH); // resize
+        ImageIcon icon = new ImageIcon("img/Illustration.png"); //
+        Image img = icon.getImage().getScaledInstance(500, 400, Image.SCALE_SMOOTH); // resize
         JLabel imgLabel = new JLabel(new ImageIcon(img));
         imgLabel.setHorizontalAlignment(JLabel.CENTER);
         centerPanel.add(imgLabel);
@@ -75,6 +75,14 @@ public class LandingPage extends JFrame {
         btnLihat.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnLihat.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         btnLihat.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnLihat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLihat.setBackground(new Color(25, 25, 80));
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLihat.setBackground(new Color(0x2980B9));
+            }
+        });
 
         btnLihat.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

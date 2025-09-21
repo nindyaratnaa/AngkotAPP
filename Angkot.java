@@ -9,6 +9,7 @@ public class Angkot {
         this.pemberhentianList = new LinkedList<>();
     }
 
+    // menambahkan node pemberhentian ke dalam list
     public void tambahPemberhentian(Pemberhentian p) {
         pemberhentianList.add(p);
     }

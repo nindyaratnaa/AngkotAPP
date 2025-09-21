@@ -2,9 +2,11 @@ import java.util.*;
 
 public class DataProvider {
     public static List<Angkot> getData() {
+        // untuk menyimpan object nya
         List<Angkot> list = new ArrayList<>();
 
         Angkot adl = new Angkot("ADL (Arjosari – Dinoyo – Landungsari)");
+        // detail jalur disimpan ke linkedlist
         adl.tambahPemberhentian(new Pemberhentian("Terminal Arjosari", "06:00, 07:00, 08:00"));
         adl.tambahPemberhentian(new Pemberhentian("Dinoyo", "06:10, 07:10, 08:10"));
         adl.tambahPemberhentian(new Pemberhentian("Terminal Landungsari", "06:25, 07:25, 08:25"));

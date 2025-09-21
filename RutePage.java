@@ -79,6 +79,14 @@ public class RutePage extends JFrame {
         btnDetail.setFocusPainted(false);
         btnDetail.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         btnDetail.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnDetail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDetail.setBackground(new Color(25, 25, 80));
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDetail.setBackground(new Color(0x2980B9));
+            }
+        });
 
         btnDetail.addActionListener(e -> {
             new DetailPage(angkot).setVisible(true);
